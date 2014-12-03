@@ -7,6 +7,10 @@ app.set('secret', process.env.SECRET || 'tinker');
 app.set('github_token', process.env.TOKEN || 'token');
 
 // Routes
+app.get('/', function(req, res) {
+  req.status(200).end();
+});
+
 app.get('/payload', function(req, res) {
   res.status(200).end();
 });
