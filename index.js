@@ -8,7 +8,7 @@ app.set('github_token', process.env.TOKEN || 'token');
 
 // Routes
 app.get('/', function(req, res) {
-  req.status(200).end();
+  res.status(200).end();
 });
 
 app.get('/payload', function(req, res) {
@@ -16,7 +16,7 @@ app.get('/payload', function(req, res) {
 });
 
 app.get('/ping', function(req, res) {
-  req.status(200).end();
+  res.status(200).end();
 });
 
 // Start the server
