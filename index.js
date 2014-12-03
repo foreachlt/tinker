@@ -3,6 +3,8 @@ var express = require('express')
 
 // Config
 app.set('port', process.env.PORT || 3000);
+app.set('secret', process.env.SECRET || 'tinker');
+app.set('github_token', process.env.TOKEN || 'token');
 
 // Routes
 app.get('/payload', function(req, res) {
