@@ -11,11 +11,7 @@ app.get('/', function(req, res) {
   res.status(200).end();
 });
 
-app.get('/payload', function(req, res) {
-  res.status(200).end();
-});
-
-app.get('/ping', function(req, res) {
+app.post('/tinker', function(req, res) {
   res.status(200).end();
 });
 
