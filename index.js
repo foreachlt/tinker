@@ -1,20 +1,16 @@
 var express = require('express')
+  , winston = require('winston')
   , app = express();
 
 // Config
-app.set('port', process.env.PORT || 3000);
-app.set('secret', process.env.SECRET || 'tinker');
-app.set('github_token', process.env.TOKEN || 'token');
+require('./lib/config')(app);
+
+// Filters
+require('./lib/filters')(app);
 
 // Routes
-app.get('/', function(req, res) {
-  res.status(200).end();
-});
-
-app.post('/tinker', function(req, res) {
-  res.status(200).end();
-});
+require('./lib/routes')(app);
 
 // Start the server
 app.listen(app.get('port'));
-console.log('Started the server on port', app.get('port'));
+console.info('Server started on port', app.get('port'));
