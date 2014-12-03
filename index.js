@@ -16,7 +16,7 @@ app.get('/payload', function(req, res) {
 });
 
 app.get('/ping', function(req, res) {
-  res.status(200).end();
+  req.status(200).end();
 });
 
 // Start the server
