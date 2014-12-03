@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.10.0",
-    "express": "^4.10.4"
+    "express": "^4.10.4",
+    "paralleljs": "^0.2.1"
   }
 }
