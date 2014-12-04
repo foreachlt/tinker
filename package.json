@@ -14,8 +14,10 @@
   "author": "Kasparas Galdikas <foreachas@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^2.3.11",
     "body-parser": "^1.10.0",
     "express": "^4.10.4",
-    "paralleljs": "^0.2.1"
+    "github": "^0.2.3",
+    "kue": "^0.8.9"
   }
 }
