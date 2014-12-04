@@ -1,4 +1,5 @@
 var express = require('express')
+  , kue = require('kue')
   , app = express();
 
 // Config
