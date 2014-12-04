@@ -1,5 +1,4 @@
 var express = require('express')
-  , winston = require('winston')
   , app = express();
 
 // Config
