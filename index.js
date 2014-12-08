@@ -4,7 +4,7 @@ var express = require('express')
   , cfg = require('./lib/config');
 
 // Filters
-require('./lib/filters')(app);
+// require('./lib/filters')(app);
 
 // Routes
 require('./lib/routes')(app);
