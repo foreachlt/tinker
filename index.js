@@ -1,9 +1,7 @@
 var express = require('express')
   , kue = require('kue')
-  , app = express();
-
-// Config
-require('./lib/config')(app);
+  , app = express()
+  , cfg = require('./lib/config');
 
 // Filters
 require('./lib/filters')(app);
@@ -16,4 +14,4 @@ require('./lib/kue')(app);
 
 // Start the server
 app.listen(app.get('port'));
-console.info('Server started on port', app.get('port'));
+console.info('Server started on port', cfg.api.PORT);
