@@ -4,7 +4,7 @@ var express = require('express')
   , cfg = require('./lib/config');
 
 // Filters
-// require('./lib/filters')(app);
+require('./lib/filters')(app);
 
 // Routes
 require('./lib/routes')(app);
@@ -13,5 +13,5 @@ require('./lib/routes')(app);
 require('./lib/kue')(app);
 
 // Start the server
-app.listen(app.get('port'));
+app.listen(cfg.api.PORT);
 console.info('Server started on port', cfg.api.PORT);
