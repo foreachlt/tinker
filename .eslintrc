@@ -105,7 +105,7 @@
     "comma-spacing": 2,
     "comma-style": 0,
     "complexity": [0, 11],
-    "consistent-return": 2,
+    "consistent-return": 1,
     "consistent-this": [0, "that"],
     "curly": [0, "multi"],
     "default-case": 0,
