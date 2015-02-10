@@ -1,5 +1,4 @@
 var express = require('express')
-  , kue = require('kue')
   , app = express()
   , cfg = require('./lib/config');
 
