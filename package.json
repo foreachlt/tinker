@@ -5,6 +5,7 @@
   "description": "PR reviewer",
   "main": "index.js",
   "scripts": {
+    "test": "node_modules/mocha/bin/mocha --require test/support --reporter spec test/ --recursive",
     "start": "node index.js"
   },
   "repository": {
@@ -24,5 +25,9 @@
     "kue": "^0.8.9",
     "request": "^2.51.0",
     "winston": "^0.8.3"
+  },
+  "devDependencies": {
+    "chai": "^2.1.0",
+    "mocha": "^2.1.0"
   }
 }

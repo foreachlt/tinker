@@ -1,11 +1,11 @@
 {
   "env": {
     "browser": false,
-    "node": false,
+    "node": true,
     "amd": false,
-    "mocha": false,
+    "mocha": true,
     "jasmine": false
-    },
+  },
 
   "rules": {
     "no-alert": 2,
@@ -78,7 +78,7 @@
     "no-script-url": 2,
     "no-self-compare": 0,
     "no-sequences": 2,
-    "no-shadow": 2,
+    "no-shadow": 0,
     "no-shadow-restricted-names": 2,
     "no-space-before-semi": 2,
     "no-spaced-func": 2,
@@ -152,9 +152,7 @@
   },
 
   "globals": {
-    "module": 0,
-    "require": 0,
-    "Buffer": 0,
-    "process": 0
+    "expect": 0,
+    "loadFixture": 0
   }
 }
