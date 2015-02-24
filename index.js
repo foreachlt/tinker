@@ -1,3 +1,13 @@
-var api = require('./lib/api');
+// TODO: This is temporary
 
-api();
+var express = require('express');
+
+var http = require('./lib/http');
+
+var app = express();
+
+app.use(http);
+
+app.listen(3000);
+
+
