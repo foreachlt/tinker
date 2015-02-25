@@ -1,14 +1,14 @@
-var Diff = require('../lib/utils/diff');
+var diffUtil = tinker.utils.diff;
 
-describe('Diff class', function() {
+describe('Utils: diff', function() {
   var diff;
 
   beforeEach(function() {
-    diff = new Diff(loadFixture('example.diff'));
+    diff = diffUtil(loadFixture('example.diff'));
   });
 
   it('should have no data if invalid diff is passed', function() {
-    expect((new Diff('')).data.length).to.equal(0);
+    expect(diffUtil('').data.length).to.equal(0);
   });
 
   it('should return a valid diff object', function() {

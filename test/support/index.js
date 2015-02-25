@@ -9,5 +9,6 @@ var loadFixture = function(src) {
 
 global.expect = chai.expect;
 global.loadFixture = loadFixture;
+global.tinker = require('../../')();
 
 module.exports = {};

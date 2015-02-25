@@ -1,0 +1,3 @@
+describe('Workers: eslint', function() {
+
+});

@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --require test/support --reporter spec test/ --recursive",
-    "start": "node index.js"
+    "test-watch": "npm test -- --watch",
+    "start": "node examples/index.js"
   },
   "repository": {
     "type": "git",
