@@ -1,10 +1,11 @@
-var diffUtil = tinker.utils.diff;
+var support = require('./support')
+  , diffUtil = tinker.utils.diff;
 
 describe('Utils: diff', function() {
   var diff;
 
   beforeEach(function() {
-    diff = diffUtil(loadFixture('example.diff'));
+    diff = diffUtil(support.loadFixture('example.diff'));
   });
 
   it('should have no data if invalid diff is passed', function() {

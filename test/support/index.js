@@ -1,14 +1,50 @@
+/**
+ * Depencencies
+ */
 var fs = require('fs')
-  , chai = require('chai');
+  , chai = require('chai')
+  , spies = require('chai-spies');
 
-var loadFixture = function(src) {
-  return fs.readFileSync(__dirname + '/fixtures/' + src, {
-    encoding: 'utf8'
-  });
+var tinker = require('../../')();
+
+/**
+ * Chai configuration
+ */
+chai.use(spies);
+
+/**
+ * Expose certain modules globally
+ */
+global.expect = chai.expect;
+global.tinker = tinker;
+
+/**
+ * Support module
+ */
+var support = module.exports = {};
+
+/**
+ * Loads the fixture file from the fixtures dir.
+ * @param {string} filename Filename
+ *
+ * @returns {[type]} Contents of the file.
+ */
+support.loadFixture = function(filename) {
+  return fs.readFileSync(__dirname + '/fixtures/' + filename
+    , { encoding: 'utf8' });
 };
 
-global.expect = chai.expect;
-global.loadFixture = loadFixture;
-global.tinker = require('../../')();
+/**
+ * Encodes the content as base64.
+ * @param {string} str Content.
+ *
+ * @returns {string} Encoded content.
+ */
+support.contentEncode = function(str) {
+  return new Buffer(str).toString('base64');
+};
 
-module.exports = {};
+/**
+ * No operation.
+ */
+support.noop = function() {};
